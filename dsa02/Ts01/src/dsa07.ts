@@ -1,6 +1,6 @@
 function secondLargetNum(arr: number[]) {
   let lrgstNum = arr[0];
-  let scndLrgst = arr[0];
+  let scndLrgst = -Infinity;
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] > lrgstNum) {
       lrgstNum = arr[i];
