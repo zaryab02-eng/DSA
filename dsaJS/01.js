@@ -55,13 +55,13 @@
 
 // console.log(containsNumber([3, 8, 2, 10, 5], 10));
 
-function firstEven(num) {
-  for (let i = 0; i < num.length; i++) {
-    if (num[i] % 2 === 0) {
-      return num[i];
-    }
-  }
-  return;
-}
+// function firstEven(num) {
+//   for (let i = 0; i < num.length; i++) {
+//     if (num[i] % 2 === 0) {
+//       return num[i];
+//     }
+//   }
+//   return;
+// }
 
-console.log(firstEven([1, 3, 5]));
+// console.log(firstEven([1, 3, 5]));
