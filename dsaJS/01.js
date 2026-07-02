@@ -65,3 +65,22 @@
 // }
 
 // console.log(firstEven([1, 3, 5]));
+
+// function indexOfNumber(num, target) {
+//   for (let i = 0; i < num.length; i++) {
+//     if (num[i] === target) {
+//       return i;
+//     }
+//   }
+//   return -1;
+// }
+
+// console.log(indexOfNumber([3, 8, 2, 10, 5], 8));
+
+function reverseArray(num) {
+  for (let i = num.length - 1; i >= 0; i--) {
+    console.log(num[i]);
+  }
+}
+
+reverseArray([3, 8, 2, 10]);
