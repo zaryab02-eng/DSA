@@ -77,10 +77,24 @@
 
 // console.log(indexOfNumber([3, 8, 2, 10, 5], 8));
 
-function reverseArray(num) {
-  for (let i = num.length - 1; i >= 0; i--) {
-    console.log(num[i]);
+// function reverseArray(num) {
+//   let result = [];
+//   for (let i = num.length - 1; i >= 0; i--) {
+//     result.push(num[i]);
+//   }
+//   return result;
+// }
+
+// console.log(reverseArray([3, 8, 2, 10]));
+
+function countOccurrences(num, target) {
+  let count = 0;
+  for (let i = 0; i < num.length; i++) {
+    if (num[i] === target) {
+      count++;
+    }
   }
+  return count;
 }
 
-reverseArray([3, 8, 2, 10]);
+console.log(countOccurrences([3, 8, 2, 8, 10, 8], 8));
