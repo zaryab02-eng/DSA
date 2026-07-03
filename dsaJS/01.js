@@ -112,6 +112,26 @@
 // console.log(getOddNumbers([3, 8, 2, 7, 10, 5]));
 
 function secondLargest(num) {
-  let secondLargest = 0;
-  for (let i = 0; i < num.length; i++) {}
+  let largest;
+  let secondLargestNum;
+
+  if (num[0] > num[1]) {
+    largest = num[0];
+    secondLargestNum = num[1];
+  } else {
+    largest = num[1];
+    secondLargestNum = num[0];
+  }
+
+  for (let i = 1; i < num.length; i++) {
+    if (num[i] > largest) {
+      secondLargestNum = largest;
+      largest = num[i];
+    } else if (num[i] > secondLargestNum) {
+      secondLargestNum = num[i];
+    }
+  }
+  return secondLargestNum;
 }
+
+console.log(secondLargest([18, 12, 5]));
