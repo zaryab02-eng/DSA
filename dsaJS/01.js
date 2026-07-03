@@ -111,27 +111,52 @@
 
 // console.log(getOddNumbers([3, 8, 2, 7, 10, 5]));
 
-function secondLargest(num) {
-  let largest;
-  let secondLargestNum;
+// function secondLargest(num) {
+//   let largest;
+//   let secondLargestNum;
 
-  if (num[0] > num[1]) {
-    largest = num[0];
-    secondLargestNum = num[1];
+//   if (num[0] > num[1]) {
+//     largest = num[0];
+//     secondLargestNum = num[1];
+//   } else {
+//     largest = num[1];
+//     secondLargestNum = num[0];
+//   }
+
+//   for (let i = 1; i < num.length; i++) {
+//     if (num[i] > largest) {
+//       secondLargestNum = largest;
+//       largest = num[i];
+//     } else if (num[i] > secondLargestNum) {
+//       secondLargestNum = num[i];
+//     }
+//   }
+//   return secondLargestNum;
+// }
+
+// console.log(secondLargest([18, 12, 5]));
+
+function secondSmallest(num) {
+  let smallestNum;
+  let secondSmallestNum;
+
+  if (num[0] < num[1]) {
+    smallestNum = num[0];
+    secondSmallestNum = num[1];
   } else {
-    largest = num[1];
-    secondLargestNum = num[0];
+    smallestNum = num[1];
+    secondSmallestNum = num[0];
   }
 
-  for (let i = 1; i < num.length; i++) {
-    if (num[i] > largest) {
-      secondLargestNum = largest;
-      largest = num[i];
-    } else if (num[i] > secondLargestNum) {
-      secondLargestNum = num[i];
+  for (let i = 0; i < num.length; i++) {
+    if (num[i] < smallestNum) {
+      secondSmallestNum = smallestNum;
+      smallestNum = num[i];
+    } else if (num[i] < secondSmallestNum) {
+      secondSmallestNum = num[i];
     }
   }
-  return secondLargestNum;
+  return secondSmallestNum;
 }
 
-console.log(secondLargest([18, 12, 5]));
+console.log(secondSmallest([12, 12, 18, 7, 10]));
