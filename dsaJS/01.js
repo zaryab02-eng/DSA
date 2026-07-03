@@ -87,14 +87,31 @@
 
 // console.log(reverseArray([3, 8, 2, 10]));
 
-function countOccurrences(num, target) {
-  let count = 0;
-  for (let i = 0; i < num.length; i++) {
-    if (num[i] === target) {
-      count++;
-    }
-  }
-  return count;
-}
+// function countOccurrences(num, target) {
+//   let count = 0;
+//   for (let i = 0; i < num.length; i++) {
+//     if (num[i] === target) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
 
-console.log(countOccurrences([3, 8, 2, 8, 10, 8], 8));
+// console.log(countOccurrences([3, 8, 2, 8, 10, 8], 8));
+
+// function getOddNumbers(num) {
+//   let odd = [];
+//   for (let i = 0; i < num.length; i++) {
+//     if (num[i] % 2 !== 0) {
+//       odd.push(num[i]);
+//     }
+//   }
+//   return odd;
+// }
+
+// console.log(getOddNumbers([3, 8, 2, 7, 10, 5]));
+
+function secondLargest(num) {
+  let secondLargest = 0;
+  for (let i = 0; i < num.length; i++) {}
+}
