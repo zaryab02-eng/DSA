@@ -136,27 +136,39 @@
 
 // console.log(secondLargest([18, 12, 5]));
 
-function secondSmallest(num) {
-  let smallestNum;
-  let secondSmallestNum;
+// function secondSmallest(num) {
+//   let smallestNum;
+//   let secondSmallestNum;
 
-  if (num[0] < num[1]) {
-    smallestNum = num[0];
-    secondSmallestNum = num[1];
-  } else {
-    smallestNum = num[1];
-    secondSmallestNum = num[0];
-  }
+//   if (num[0] < num[1]) {
+//     smallestNum = num[0];
+//     secondSmallestNum = num[1];
+//   } else {
+//     smallestNum = num[1];
+//     secondSmallestNum = num[0];
+//   }
 
+//   for (let i = 0; i < num.length; i++) {
+//     if (num[i] < smallestNum) {
+//       secondSmallestNum = smallestNum;
+//       smallestNum = num[i];
+//     } else if (num[i] < secondSmallestNum) {
+//       secondSmallestNum = num[i];
+//     }
+//   }
+//   return secondSmallestNum;
+// }
+
+// console.log(secondSmallest([12, 12, 18, 7, 10]));
+
+function largestEven(num) {
+  let largestEvenNum = -Infinity;
   for (let i = 0; i < num.length; i++) {
-    if (num[i] < smallestNum) {
-      secondSmallestNum = smallestNum;
-      smallestNum = num[i];
-    } else if (num[i] < secondSmallestNum) {
-      secondSmallestNum = num[i];
+    if (num[i] % 2 === 0 && num[i] > largestEvenNum) {
+      largestEvenNum = num[i];
     }
   }
-  return secondSmallestNum;
+  return largestEvenNum;
 }
 
-console.log(secondSmallest([12, 12, 18, 7, 10]));
+console.log(largestEven([-8, -2, -10]));
