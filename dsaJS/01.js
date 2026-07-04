@@ -208,3 +208,26 @@
 //   return oddGreaterThanNum;
 // }
 // console.log(oddGreaterThan([4, 7, 12, 15, 18, 21], 10));
+
+// function lastOccurrence(num, target) {
+//   let lastIndex = -1;
+//   for (let i = 0; i < num.length; i++) {
+//     if (num[i] === target) {
+//       lastIndex = i;
+//     }
+//   }
+//   return lastIndex;
+// }
+
+// console.log(lastOccurrence([5, 8, 2, 8, 10, 8], 8));
+
+function firstOccurrence(num, target) {
+  for (let i = 0; i < num.length; i++) {
+    if (num[i] === target) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+console.log(firstOccurrence([5, 8, 2, 8, 10, 8], 8));
