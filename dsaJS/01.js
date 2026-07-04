@@ -161,14 +161,39 @@
 
 // console.log(secondSmallest([12, 12, 18, 7, 10]));
 
-function largestEven(num) {
-  let largestEvenNum = -Infinity;
+// function largestEven(num) {
+//   let largestEvenNum = -Infinity;
+//   for (let i = 0; i < num.length; i++) {
+//     if (num[i] % 2 === 0 && num[i] > largestEvenNum) {
+//       largestEvenNum = num[i];
+//     }
+//   }
+//   return largestEvenNum;
+// }
+
+// console.log(largestEven([-8, -2, -10]));
+
+// function largestOdd(num) {
+//   let largestOddNum = -Infinity;
+//   for (let i = 0; i < num.length; i++) {
+//     if (num[i] % 2 !== 0 && num[i] > largestOddNum) {
+//       largestOddNum = num[i];
+//     }
+//   }
+//   return largestOddNum;
+// }
+
+// console.log(largestOdd([8, 15, 2, 21, 10, 17]));
+
+function countEvenGreaterThan(num, target) {
+  let count = 0;
   for (let i = 0; i < num.length; i++) {
-    if (num[i] % 2 === 0 && num[i] > largestEvenNum) {
-      largestEvenNum = num[i];
+    if (num[i] % 2 === 0 && num[i] > target) {
+      count++;
     }
   }
-  return largestEvenNum;
+
+  return count;
 }
 
-console.log(largestEven([-8, -2, -10]));
+console.log(countEvenGreaterThan([4, 7, 12, 15, 18, 20], 10));
