@@ -185,15 +185,26 @@
 
 // console.log(largestOdd([8, 15, 2, 21, 10, 17]));
 
-function countEvenGreaterThan(num, target) {
-  let count = 0;
-  for (let i = 0; i < num.length; i++) {
-    if (num[i] % 2 === 0 && num[i] > target) {
-      count++;
-    }
-  }
+// function countEvenGreaterThan(num, target) {
+//   let count = 0;
+//   for (let i = 0; i < num.length; i++) {
+//     if (num[i] % 2 === 0 && num[i] > target) {
+//       count++;
+//     }
+//   }
 
-  return count;
-}
+//   return count;
+// }
 
-console.log(countEvenGreaterThan([4, 7, 12, 15, 18, 20], 10));
+// console.log(countEvenGreaterThan([4, 7, 12, 15, 18, 20], 10));
+
+// function oddGreaterThan(num, target) {
+//   let oddGreaterThanNum = [];
+//   for (let i = 0; i < num.length; i++) {
+//     if (num[i] % 2 !== 0 && num[i] > target) {
+//       oddGreaterThanNum.push(num[i]);
+//     }
+//   }
+//   return oddGreaterThanNum;
+// }
+// console.log(oddGreaterThan([4, 7, 12, 15, 18, 21], 10));
