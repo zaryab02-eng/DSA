@@ -268,20 +268,38 @@
 
 // console.log(lastLargestIndex([5, 18, 7, 18, 10]));
 
-function largestEvenIndex(num) {
-  let largestEvenIdx = 0;
+// function largestEvenIndex(num) {
+//   let largestEvenIdx = 0;
+//   for (let i = 0; i < num.length; i++) {
+//     if (num[i] % 2 === 0) {
+//       largestEvenIdx = i;
+//       break;
+//     }
+//   }
+//   for (let i = 0; i < num.length; i++) {
+//     if (num[i] % 2 === 0 && num[i] > num[largestEvenIdx]) {
+//       largestEvenIdx = i;
+//     }
+//   }
+//   return largestEvenIdx;
+// }
+
+// console.log(largestEvenIndex([101, 13, 12, 18, 10]));
+
+function smallestOddIndex(num) {
+  let smallestOddIdx = 0;
   for (let i = 0; i < num.length; i++) {
-    if (num[i] % 2 === 0) {
-      largestEvenIdx = i;
+    if (num[i] % 2 !== 0) {
+      smallestOddIdx = i;
       break;
     }
   }
   for (let i = 0; i < num.length; i++) {
-    if (num[i] % 2 === 0 && num[i] > num[largestEvenIdx]) {
-      largestEvenIdx = i;
+    if (num[i] % 2 !== 0 && num[i] < num[smallestOddIdx]) {
+      smallestOddIdx = i;
     }
   }
-  return largestEvenIdx;
+  return smallestOddIdx;
 }
 
-console.log(largestEvenIndex([101, 13, 12, 18, 10]));
+console.log(smallestOddIndex([8, 15, 2, 21, 5, 10]));
