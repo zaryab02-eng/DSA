@@ -286,20 +286,36 @@
 
 // console.log(largestEvenIndex([101, 13, 12, 18, 10]));
 
-function smallestOddIndex(num) {
-  let smallestOddIdx = 0;
+// function smallestOddIndex(num) {
+//   let smallestOddIdx = 0;
+//   for (let i = 0; i < num.length; i++) {
+//     if (num[i] % 2 !== 0) {
+//       smallestOddIdx = i;
+//       break;
+//     }
+//   }
+//   for (let i = 0; i < num.length; i++) {
+//     if (num[i] % 2 !== 0 && num[i] < num[smallestOddIdx]) {
+//       smallestOddIdx = i;
+//     }
+//   }
+//   return smallestOddIdx;
+// }
+
+// console.log(smallestOddIndex([8, 15, 2, 21, 5, 10]));
+
+function smallestEven(num) {
+  let smallest = null;
   for (let i = 0; i < num.length; i++) {
-    if (num[i] % 2 !== 0) {
-      smallestOddIdx = i;
+    if (num[i] % 2 === 0) {
+      smallest = num[i];
       break;
     }
-  }
-  for (let i = 0; i < num.length; i++) {
-    if (num[i] % 2 !== 0 && num[i] < num[smallestOddIdx]) {
-      smallestOddIdx = i;
+    if (num[i] % 2 === 0 && num[i] < smallest) {
+      smallest = num[i];
     }
   }
-  return smallestOddIdx;
+  return smallest;
 }
 
-console.log(smallestOddIndex([8, 15, 2, 21, 5, 10]));
+console.log(smallestEven([9, 8, 3, 12, 2, 7]));
