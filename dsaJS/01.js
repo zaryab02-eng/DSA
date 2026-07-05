@@ -244,14 +244,44 @@
 
 // console.log(largestIndex([12, 5, 18, 7, 10]));
 
-function smallestIndex(num) {
-  let smallestNumIndex = 0;
+// function smallestIndex(num) {
+//   let smallestNumIndex = 0;
+//   for (let i = 0; i < num.length; i++) {
+//     if (num[i] < num[smallestNumIndex]) {
+//       smallestNumIndex = i;
+//     }
+//   }
+//   return smallestNumIndex;
+// }
+
+// console.log(smallestIndex([12, 5, 18, 7, 10]));
+
+// function lastLargestIndex(num) {
+//   let largestIndex = 0;
+//   for (let i = 0; i < num.length; i++) {
+//     if (num[i] >= num[largestIndex]) {
+//       largestIndex = i;
+//     }
+//   }
+//   return largestIndex;
+// }
+
+// console.log(lastLargestIndex([5, 18, 7, 18, 10]));
+
+function largestEvenIndex(num) {
+  let largestEvenIdx = 0;
   for (let i = 0; i < num.length; i++) {
-    if (num[i] < num[smallestNumIndex]) {
-      smallestNumIndex = i;
+    if (num[i] % 2 === 0) {
+      largestEvenIdx = i;
+      break;
     }
   }
-  return smallestNumIndex;
+  for (let i = 0; i < num.length; i++) {
+    if (num[i] % 2 === 0 && num[i] > num[largestEvenIdx]) {
+      largestEvenIdx = i;
+    }
+  }
+  return largestEvenIdx;
 }
 
-console.log(smallestIndex([12, 5, 18, 7, 10]));
+console.log(largestEvenIndex([101, 13, 12, 18, 10]));
