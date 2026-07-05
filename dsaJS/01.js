@@ -221,13 +221,37 @@
 
 // console.log(lastOccurrence([5, 8, 2, 8, 10, 8], 8));
 
-function firstOccurrence(num, target) {
+// function firstOccurrence(num, target) {
+//   for (let i = 0; i < num.length; i++) {
+//     if (num[i] === target) {
+//       return i;
+//     }
+//   }
+//   return -1;
+// }
+
+// console.log(firstOccurrence([5, 8, 2, 8, 10, 8], 8));
+
+// function largestIndex(num) {
+//   let largest = 0;
+//   for (let i = 1; i < num.length; i++) {
+//     if (num[i] > num[largest]) {
+//       largest = i;
+//     }
+//   }
+//   return largest;
+// }
+
+// console.log(largestIndex([12, 5, 18, 7, 10]));
+
+function smallestIndex(num) {
+  let smallestNumIndex = 0;
   for (let i = 0; i < num.length; i++) {
-    if (num[i] === target) {
-      return i;
+    if (num[i] < num[smallestNumIndex]) {
+      smallestNumIndex = i;
     }
   }
-  return -1;
+  return smallestNumIndex;
 }
 
-console.log(firstOccurrence([5, 8, 2, 8, 10, 8], 8));
+console.log(smallestIndex([12, 5, 18, 7, 10]));
