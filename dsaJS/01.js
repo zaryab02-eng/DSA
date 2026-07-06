@@ -323,21 +323,39 @@
 
 // console.log(smallestEven([9, 8, 3, 12, 2, 7]));
 
-function largestNegative(num) {
-  let largestNegativeNum = null;
+// function largestNegative(num) {
+//   let largestNegativeNum = null;
+//   for (let i = 0; i < num.length; i++) {
+//     if (num[i] < 0) {
+//       if (largestNegativeNum === null) {
+//         largestNegativeNum = num[i];
+//       } else if (num[i] > largestNegativeNum) {
+//         largestNegativeNum = num[i];
+//       }
+//     }
+//   }
+//   if (largestNegativeNum === null) {
+//     return -1;
+//   }
+//   return largestNegativeNum;
+// }
+
+// console.log(largestNegative([4, -7, 9, -2, -10, 5]));
+
+function smallestPositive(num) {
+  let smallestPositiveNum = null;
   for (let i = 0; i < num.length; i++) {
-    if (num[i] < 0) {
-      if (largestNegativeNum === null) {
-        largestNegativeNum = num[i];
-      } else if (num[i] > largestNegativeNum) {
-        largestNegativeNum = num[i];
+    if (num[i] > 0) {
+      if (smallestPositiveNum === null) {
+        smallestPositiveNum = num[i];
+      } else if (num[i] < smallestPositiveNum) {
+        smallestPositiveNum = num[i];
       }
     }
   }
-  if (largestNegativeNum === null) {
+  if (smallestPositiveNum === null) {
     return -1;
   }
-  return largestNegativeNum;
+  return smallestPositiveNum;
 }
-
-console.log(largestNegative([4, -7, 9, -2, -10, 5]));
+console.log(smallestPositive([-5, 7, 3, -2, 10, 1]));
