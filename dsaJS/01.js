@@ -308,12 +308,15 @@ function smallestEven(num) {
   let smallest = null;
   for (let i = 0; i < num.length; i++) {
     if (num[i] % 2 === 0) {
-      smallest = num[i];
-      break;
+      if (smallest === null) {
+        smallest = num[i];
+      } else if (num[i] < smallest) {
+        smallest = num[i];
+      }
     }
-    if (num[i] % 2 === 0 && num[i] < smallest) {
-      smallest = num[i];
-    }
+  }
+  if (smallest === null) {
+    return -1;
   }
   return smallest;
 }
