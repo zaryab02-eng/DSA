@@ -304,21 +304,40 @@
 
 // console.log(smallestOddIndex([8, 15, 2, 21, 5, 10]));
 
-function smallestEven(num) {
-  let smallest = null;
+// function smallestEven(num) {
+//   let smallest = null;
+//   for (let i = 0; i < num.length; i++) {
+//     if (num[i] % 2 === 0) {
+//       if (smallest === null) {
+//         smallest = num[i];
+//       } else if (num[i] < smallest) {
+//         smallest = num[i];
+//       }
+//     }
+//   }
+//   if (smallest === null) {
+//     return -1;
+//   }
+//   return smallest;
+// }
+
+// console.log(smallestEven([9, 8, 3, 12, 2, 7]));
+
+function largestNegative(num) {
+  let largestNegativeNum = null;
   for (let i = 0; i < num.length; i++) {
-    if (num[i] % 2 === 0) {
-      if (smallest === null) {
-        smallest = num[i];
-      } else if (num[i] < smallest) {
-        smallest = num[i];
+    if (num[i] < 0) {
+      if (largestNegativeNum === null) {
+        largestNegativeNum = num[i];
+      } else if (num[i] > largestNegativeNum) {
+        largestNegativeNum = num[i];
       }
     }
   }
-  if (smallest === null) {
+  if (largestNegativeNum === null) {
     return -1;
   }
-  return smallest;
+  return largestNegativeNum;
 }
 
-console.log(smallestEven([9, 8, 3, 12, 2, 7]));
+console.log(largestNegative([4, -7, 9, -2, -10, 5]));
